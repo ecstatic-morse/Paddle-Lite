@@ -14,9 +14,11 @@
 ''' Collect op registry information. '''
 
 from __future__ import print_function
-import sys
+
 import logging
-from ast import RegisterLiteOpParser
+import sys
+
+from astast import RegisterLiteOpParser
 
 if len(sys.argv) != 5:
     print("Error: parse_op_registry.py requires four inputs!")

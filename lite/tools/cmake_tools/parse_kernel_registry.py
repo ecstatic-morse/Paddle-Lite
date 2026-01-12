@@ -13,9 +13,11 @@
 # limitations under the License.
 
 from __future__ import print_function
-import sys
+
 import logging
-from ast import RegisterLiteKernelParser
+import sys
+
+from astast import RegisterLiteKernelParser
 
 if len(sys.argv) != 7:
     print("Error: parse_kernel_registry.py requires six inputs!")

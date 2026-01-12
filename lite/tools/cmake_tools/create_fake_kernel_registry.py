@@ -20,9 +20,11 @@ Usage: to generate `all_kernel_faked.cc`, `all_kernel_faked.cc` is used for
 """
 
 from __future__ import print_function
-import sys
+
 import logging
-from ast import RegisterLiteKernelParser
+import sys
+
+from astast import RegisterLiteKernelParser
 from utils import *
 
 if len(sys.argv) != 5:

@@ -14,10 +14,11 @@
 # this module will record supported ops from kernels_src.txt
 
 from __future__ import print_function
-import sys
+
 import logging
-from ast import RegisterLiteKernelParser
-from ast import RegisterLiteOpParser
+import sys
+
+from astast import RegisterLiteKernelParser, RegisterLiteOpParser
 
 if len(sys.argv) != 5:
     print("Error: record_supported_kernel_op.py requires four inputs!")
