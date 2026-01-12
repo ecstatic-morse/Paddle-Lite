@@ -28,7 +28,7 @@ endif
 $(info HOST_NAME: $(HOST_NAME))
 $(info HOST_TARGET: $(HOST_TARGET))
 
-ifeq ($(shell expr $(NDK_VERSION) \<= 18), 1)
+ifeq (0, 1)
     ifeq ($(ARM_ABI), arm8)
         CC = $(NDK_ROOT)/toolchains/aarch64-linux-android-4.9/prebuilt/$(HOST_TARGET)/bin/aarch64-linux-android-g++
         SYSROOT_LINK = --sysroot=$(NDK_ROOT)/platforms/android-21/arch-arm64
@@ -72,7 +72,7 @@ else
     INCLUDES = $(SYSTEM_INCLUDES) -I$(NDK_ROOT)/sysroot/usr/include/arm-linux-androideabi
 endif
 
-ifeq ($(shell expr $(NDK_VERSION) \>= 21), 1)
+ifeq (1, 1)
     CXX_FLAGS += -fopenmp -static-openmp
 else
     CXX_FLAGS += -fopenmp
