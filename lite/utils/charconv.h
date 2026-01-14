@@ -15,6 +15,7 @@
 #pragma once
 
 #include <stdlib.h>
+#include <cstdint>
 #include <algorithm>
 #include <climits>
 #include <limits>
