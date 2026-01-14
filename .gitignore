@@ -88,6 +88,10 @@ cmake-build-release
 # ios
 tools/libomp.a
 
+#demo
+#demo/cxx/lac_demo/lac_model_conf_data{,.tar.gz}
+lac_model_conf_data*
+
 # ios demo
 demo/ios/PaddleMobileDemo/PaddleMobileDemo/googlenet_combine/
 demo/ios/PaddleMobileDemo/PaddleMobileDemo/*.jpg
