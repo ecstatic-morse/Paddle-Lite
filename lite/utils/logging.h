@@ -228,7 +228,8 @@ class VLogMessage {
     if (GLOG_v_int < level_int) {
       return;
     }
-    const char* level = paddle::lite::to_string(level_int).c_str();
+    auto s = paddle::lite::to_string(level_int);
+    const char* level = s.c_str();
     paddle::lite::gen_log(log_stream_, file, func, lineno, level);
   }
 
