@@ -185,7 +185,7 @@ function make_x86 {
 
   prepare_workspace $root_dir $build_directory
 
-  cmake $root_dir  -DWITH_MKL=${WITH_MKL}  \
+  cmake $root_dir -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DWITH_MKL=${WITH_MKL}  \
             -DWITH_STATIC_MKL=${WITH_STATIC_MKL}  \
             -DWITH_TESTING=OFF \
             -DWITH_AVX=${WITH_AVX} \
