@@ -125,3 +125,5 @@ third-party/*
 
 # hiai libs
 ai_ddk_lib*
+
+lite/backends/arm/math/dotprod/gemm_*dot.h
