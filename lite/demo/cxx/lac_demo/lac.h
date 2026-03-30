@@ -36,7 +36,7 @@ class LAC {
 
   std::vector<std::string> _seq_words;
   std::vector<std::vector<std::string>> _seq_words_batch;
-  std::vector<std::vector<size_t>> _lod;
+  std::vector<std::vector<uint64_t>> _lod;
   std::vector<std::string> _labels;
   std::vector<OutputItem> _results;
   std::vector<std::vector<OutputItem>> _results_batch;

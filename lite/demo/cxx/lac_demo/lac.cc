@@ -24,7 +24,7 @@ LAC::LAC(const std::string &model_path,
          int threads,
          CODE_TYPE type)
     : _codetype(type),
-      _lod(std::vector<std::vector<size_t>>(1)),
+      _lod(std::vector<std::vector<uint64_t>>(1)),
       _word2id_dict(new std::unordered_map<std::string, int64_t>),
       _q2b_dict(new std::unordered_map<std::string, std::string>),
       _id2label_dict(new std::unordered_map<int64_t, std::string>) {
