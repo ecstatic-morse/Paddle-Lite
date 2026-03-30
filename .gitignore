@@ -30,6 +30,8 @@
 *.exe
 *.out
 *.app
+/lac_demo
+*.dsym
 
 .DS_Store
 
@@ -127,3 +129,4 @@ third-party/*
 ai_ddk_lib*
 
 lite/backends/arm/math/dotprod/gemm_*dot.h
+/lac_model_conf_data*
