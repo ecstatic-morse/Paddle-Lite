@@ -44,6 +44,8 @@ ExternalProject_Add(
     PREFIX          ${GFLAGS_INCLUDE_DIR}
     UPDATE_COMMAND  ""
     CMAKE_ARGS      -DBUILD_STATIC_LIBS=ON
+                    -DCMAKE_POLICY_DEFAULT_CMP0057=NEW
+                    -DCMAKE_POLICY_VERSION_MINIMUM=3.5
                     -DCMAKE_INSTALL_PREFIX=${GFLAGS_INSTALL_DIR}
                     -DCMAKE_POSITION_INDEPENDENT_CODE=ON
                     -DBUILD_TESTING=OFF

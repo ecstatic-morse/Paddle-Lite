@@ -130,7 +130,9 @@ function build_opt {
       -DWITH_TESTING=OFF \
       -DLITE_BUILD_EXTRA=ON \
       -DLITE_WITH_X86=${with_x86} \
-      -DWITH_MKL=OFF
+      -DWITH_MKL=OFF \
+      -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+      -DPYTHON_EXECUTABLE=$(PYENV_VERSION=3.10 pyenv which python)
     make opt -j$NUM_PROC
 }
 

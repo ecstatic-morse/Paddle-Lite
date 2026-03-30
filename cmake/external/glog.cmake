@@ -54,6 +54,8 @@ ExternalProject_Add(
     CMAKE_ARGS      ${CROSS_COMPILE_CMAKE_ARGS}
                     ${OPTIONAL_ARGS}
                     -DCMAKE_INSTALL_PREFIX=${GLOG_INSTALL_DIR}
+                    -DCMAKE_POLICY_DEFAULT_CMP0057=NEW
+                    -DCMAKE_POLICY_VERSION_MINIMUM=3.5
                     -DCMAKE_POSITION_INDEPENDENT_CODE=ON
                     -DWITH_GFLAGS=ON
                     -Dgflags_DIR=${GFLAGS_INSTALL_DIR}/lib/cmake/gflags
