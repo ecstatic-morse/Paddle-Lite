@@ -16,7 +16,7 @@
 from __future__ import print_function
 import sys
 import logging
-from ast import RegisterLiteOpParser
+from astast import RegisterLiteOpParser
 
 if len(sys.argv) != 6:
     print("Error: parse_op_registry.py requires four inputs!")
