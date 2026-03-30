@@ -16,8 +16,10 @@
 
 #include <fstream>
 #include <iostream>
-#include "lac_util.h"    // NOLINT
-#include "paddle_api.h"  // NOLINT
+#include "lac_util.h"         // NOLINT
+#include "paddle_api.h"       // NOLINT
+#include "paddle_use_kernels.h"  // NOLINT
+#include "paddle_use_ops.h"      // NOLINT
 
 LAC::LAC(const std::string &model_path,
          const std::string &conf_path,
