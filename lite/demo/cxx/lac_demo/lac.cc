@@ -61,7 +61,7 @@ int LAC::feed_data(const std::vector<std::string> &querys) {
     shape += this->_seq_words.size();
     this->_lod[0].push_back(shape);
   }
-  this->_input_tensor->Resize({shape, 1});
+  this->_input_tensor->Resize({static_cast<int64_t>(shape), 1});
   this->_input_tensor->SetLoD(this->_lod);
   int64_t *input_d = this->_input_tensor->mutable_data<int64_t>();
   int index = 0;
