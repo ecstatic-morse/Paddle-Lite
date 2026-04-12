@@ -13,7 +13,7 @@ WITH_EXTRA=OFF
 WITH_CV=OFF
 # controls whether to hide log information, default is ON.
 WITH_LOG=ON
-# controls whether to throw the exception when error occurs, default is OFF 
+# controls whether to throw the exception when error occurs, default is OFF
 WITH_EXCEPTION=OFF
 # controls whether to use metal, default is OFF
 WITH_METAL=OFF
@@ -101,6 +101,7 @@ function make_ios {
             -DLITE_BUILD_TAILOR=$WITH_STRIP \
             -DLITE_OPTMODEL_DIR=$OPTMODEL_DIR \
             -DARM_TARGET_ARCH_ABI=$arch \
+            -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
             -DLITE_BUILD_EXTRA=$WITH_EXTRA \
             -DLITE_WITH_ARM82_FP16=$BUILD_ARM82_FP16 \
             -DLITE_WITH_CV=$WITH_CV \

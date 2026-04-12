@@ -208,6 +208,7 @@ function make_armosx {
             -DLITE_BUILD_TAILOR=$BUILD_TAILOR \
             -DLITE_OPTMODEL_DIR=$OPTMODEL_DIR \
             -DARM_TARGET_ARCH_ABI=$arch \
+            -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
             -DLITE_BUILD_EXTRA=$BUILD_EXTRA \
             -DLITE_WITH_CV=$BUILD_CV \
             -DLITE_WITH_ARM82_FP16=$BUILD_ARM82_FP16 \
@@ -290,6 +291,7 @@ function make_x86 {
             -DLITE_WITH_EXCEPTION=$WITH_EXCEPTION \
             -DLITE_WITH_LTO=${WITH_LTO} \
             -DCMAKE_BUILD_TYPE=Release \
+            -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
             -DPY_VERSION=$PY_VERSION \
             $PYTHON_EXECUTABLE_OPTION
 
