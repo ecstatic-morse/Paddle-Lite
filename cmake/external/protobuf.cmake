@@ -183,7 +183,8 @@ FUNCTION(build_protobuf TARGET_NAME BUILD_FOR_HOST)
     SET(OPTIONAL_CACHE_ARGS "")
     SET(OPTIONAL_ARGS "")
     SET(SOURCE_DIR "${PADDLE_SOURCE_DIR}/third-party/protobuf-host")
-    set(PATCH_COMMAND "")
+    set(PATCH_COMMAND git -C "${SOURCE_DIR}" apply --check "${PADDLE_SOURCE_DIR}/patches/protobuf-host.patch" 2>/dev/null ||
+                      git -C "${SOURCE_DIR}" apply "${PADDLE_SOURCE_DIR}/patches/protobuf-host.patch")
 
     IF(BUILD_FOR_HOST)
         # set for server compile.
