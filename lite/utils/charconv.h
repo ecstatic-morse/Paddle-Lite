@@ -17,6 +17,7 @@
 #include <stdlib.h>
 #include <algorithm>
 #include <climits>
+#include <cstdint>
 #include <limits>
 #include <system_error>          // NOLINT
 #include "lite/utils/variant.h"  // for likely

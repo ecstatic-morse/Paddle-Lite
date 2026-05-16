@@ -28,7 +28,7 @@ bool TensorArrayToTensorOpLite::CheckShape() const {
 
 bool TensorArrayToTensorOpLite::InferShapeImpl() const {
   std::vector<Tensor *> inputs;
-  for (int i = 0; i < param_.X->size(); i++) {
+  for (size_t i = 0; i < param_.X->size(); i++) {
     inputs.push_back(&(*param_.X)[i]);
   }
   const size_t n = inputs.size();
@@ -36,10 +36,11 @@ bool TensorArrayToTensorOpLite::InferShapeImpl() const {
   bool use_stack = param_.use_stack;
   if (use_stack) {
     auto input_dims = inputs[0]->dims();
-    int rank = input_dims.size();
+    int rank = static_cast<int>(input_dims.size());
     if (axis < 0) axis += (rank + 1);
+    if (axis < 0) axis = 0;
     auto vec = input_dims.Vectorize();
-    vec.insert(vec.begin() + axis, inputs.size());
+    vec.insert(vec.begin() + axis, static_cast<int64_t>(n));
     param_.Out->Resize(vec);
   } else {
     auto out_dims = inputs[0]->dims();
